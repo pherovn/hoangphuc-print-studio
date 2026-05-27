@@ -1,28 +1,30 @@
 import { useState, useEffect, useRef } from 'react';
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
 import { ChevronRight, ChevronLeft, X, ArrowRight, Printer, PenTool, CheckCircle, Package, Layers, Droplet, Clock, ShieldCheck, Mail, Phone, MapPin, Instagram, Facebook } from 'lucide-react';
 
 export default function App() {
   const { scrollYProgress } = useScroll();
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-white text-zinc-900 font-sans selection:bg-cyan-200 selection:text-cyan-900">
-      <Navbar />
+      <Navbar onOpenQuote={() => setIsQuoteModalOpen(true)} />
       <main>
-        <Hero scrollYProgress={scrollYProgress} />
+        <Hero scrollYProgress={scrollYProgress} onOpenQuote={() => setIsQuoteModalOpen(true)} />
         <Services />
         <Features />
         <Gallery />
         <Process />
-        <CTA />
+        <CTA onOpenQuote={() => setIsQuoteModalOpen(true)} />
       </main>
       <Footer />
       <FloatingZalo />
+      <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
     </div>
   );
 }
 
-function Navbar() {
+function Navbar({ onOpenQuote }: { onOpenQuote?: () => void }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -62,7 +64,7 @@ function Navbar() {
             <span className="text-[10px] text-zinc-400 font-light group-hover:text-zinc-600 transition-colors">Process</span>
           </a>
         </div>
-        <a href="#contact" className="bg-zinc-900 text-white pl-6 pr-2 py-2 rounded-full text-sm font-medium hover:bg-zinc-800 transition-all shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] inline-flex items-center gap-4 group cursor-pointer">
+        <button onClick={onOpenQuote} className="bg-zinc-900 text-white pl-6 pr-2 py-2 rounded-full text-sm font-medium hover:bg-zinc-800 transition-all shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] inline-flex items-center gap-4 group cursor-pointer border-none outline-none">
           <div className="flex flex-col items-start leading-none gap-0.5 py-0.5">
             <span>Nhận báo giá</span>
             <span className="text-[10px] text-zinc-400 font-light group-hover:text-zinc-300 transition-colors">Get Quote</span>
@@ -70,13 +72,13 @@ function Navbar() {
           <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
             <ArrowRight className="w-4 h-4" />
           </div>
-        </a>
+        </button>
       </div>
     </nav>
   );
 }
 
-function Hero({ scrollYProgress }: { scrollYProgress: any }) {
+function Hero({ scrollYProgress, onOpenQuote }: { scrollYProgress: any, onOpenQuote?: () => void }) {
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '20%']);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
@@ -117,10 +119,10 @@ function Hero({ scrollYProgress }: { scrollYProgress: any }) {
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
-            <a href="#contact" className="bg-zinc-900 text-white px-8 py-4 rounded-full font-medium hover:bg-zinc-800 transition-all inline-flex flex-col items-center shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] group cursor-pointer">
+            <button onClick={onOpenQuote} className="bg-zinc-900 text-white px-8 py-4 rounded-full font-medium hover:bg-zinc-800 transition-all inline-flex flex-col items-center shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] group cursor-pointer border-none outline-none">
               <span className="text-base">Báo giá nhanh</span>
               <span className="text-[10px] text-zinc-400 font-light group-hover:text-zinc-300 transition-colors">Quick Quote</span>
-            </a>
+            </button>
             <a href="#gallery" className="bg-white border border-zinc-200 text-zinc-800 px-8 py-4 rounded-full font-medium hover:bg-zinc-50 transition-all inline-flex flex-col items-center hover:border-zinc-300 group shadow-sm cursor-pointer">
               <span className="text-base">Xem mẫu in</span>
               <span className="text-[10px] text-zinc-500 font-light group-hover:text-zinc-400 transition-colors">View Gallery</span>
@@ -446,7 +448,7 @@ function Process() {
   );
 }
 
-function CTA() {
+function CTA({ onOpenQuote }: { onOpenQuote?: () => void }) {
   return (
     <section className="py-32 md:py-40 relative flex items-center justify-center overflow-hidden bg-white">
       {/* CMYK Center Glow */}
@@ -475,10 +477,10 @@ function CTA() {
             Quality Creates Trust
           </div>
           
-          <a href="#contact" className="bg-zinc-900 text-white px-10 py-5 rounded-full text-lg font-medium hover:bg-zinc-800 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 inline-flex flex-col items-center gap-1 group cursor-pointer">
+          <button onClick={onOpenQuote} className="bg-zinc-900 text-white px-10 py-5 rounded-full text-lg font-medium hover:bg-zinc-800 transition-all shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 inline-flex flex-col items-center gap-1 group cursor-pointer border-none outline-none">
             <span>Đặt in ngay</span>
             <span className="text-xs text-zinc-400 font-light group-hover:text-zinc-300 transition-colors tracking-widest uppercase">Start Your Order</span>
-          </a>
+          </button>
         </motion.div>
       </div>
     </section>
@@ -598,5 +600,70 @@ function FloatingZalo() {
         </div>
       </motion.div>
     </motion.a>
+  );
+}
+
+function QuoteModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            onClick={onClose}
+          />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+            className="relative w-full max-w-[480px] bg-white rounded-[2.5rem] p-8 md:p-10 shadow-2xl overflow-hidden flex flex-col items-center"
+          >
+            <button 
+              onClick={onClose}
+              className="absolute top-6 right-6 w-10 h-10 bg-zinc-100 hover:bg-zinc-200 rounded-full flex items-center justify-center text-zinc-600 transition-colors cursor-pointer"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            
+            <div className="text-center mb-8 flex flex-col items-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-[1.25rem] bg-zinc-900/5 mb-6">
+                <Phone className="w-8 h-8 text-zinc-900" />
+              </div>
+              <h3 className="text-3xl font-display font-bold tracking-tight text-zinc-900 mb-2">Liên Hệ Báo Giá</h3>
+              <p className="text-[11px] text-zinc-400 font-semibold tracking-widest uppercase">Quick Quotation</p>
+            </div>
+
+            <div className="bg-zinc-50 border border-zinc-100 rounded-3xl p-6 text-center mb-8 shadow-inner w-full">
+              <p className="text-zinc-600 leading-relaxed font-light mb-6 text-[15px]">
+                Để được tư vấn về file in và báo giá in pet nhanh nhất, quý khách vui lòng liên hệ hotline:
+              </p>
+              <div className="flex flex-col gap-3 max-w-[280px] mx-auto">
+                <a href="tel:0905305693" className="bg-white border border-zinc-200/80 px-6 py-3.5 rounded-2xl font-medium text-lg text-zinc-900 hover:border-zinc-300 hover:shadow-md transition-all flex items-center justify-center gap-3 group">
+                  <Phone className="w-5 h-5 text-zinc-400 group-hover:text-blue-500 transition-colors" />
+                  0905 305 693
+                </a>
+                <a href="tel:0936764864" className="bg-white border border-zinc-200/80 px-6 py-3.5 rounded-2xl font-medium text-lg text-zinc-900 hover:border-zinc-300 hover:shadow-md transition-all flex items-center justify-center gap-3 group">
+                  <Phone className="w-5 h-5 text-zinc-400 group-hover:text-blue-500 transition-colors" />
+                  0936 764 864
+                </a>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <div className="w-32 h-32 p-3 bg-white border border-zinc-200/80 rounded-[1.5rem] shadow-sm mb-4 group hover:shadow-md transition-shadow">
+                <img src="/qr-zl.png" alt="Zalo QR Code" className="w-full h-full object-contain rounded-xl" />
+              </div>
+              <div className="text-[10px] font-bold text-blue-500 tracking-widest uppercase">
+                Quét mã Zalo
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
+    </AnimatePresence>
   );
 }
