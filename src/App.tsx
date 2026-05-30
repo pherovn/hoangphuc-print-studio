@@ -15,6 +15,7 @@ export default function App() {
         <Features />
         <Gallery />
         <Process />
+        <FAQ />
         <CTA onOpenQuote={() => setIsQuoteModalOpen(true)} />
       </main>
       <Footer />
@@ -24,7 +25,7 @@ export default function App() {
   );
 }
 
-function Navbar({ onOpenQuote }: { onOpenQuote?: () => void }) {
+export function Navbar({ onOpenQuote }: { onOpenQuote?: () => void }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -98,33 +99,33 @@ function Hero({ scrollYProgress, onOpenQuote }: { scrollYProgress: any, onOpenQu
           className="max-w-2xl"
         >
           <div className="inline-block mb-8 px-4 py-1.5 rounded-full border border-zinc-200/80 bg-white/60 backdrop-blur-md shadow-sm">
-            <span className="text-xs font-semibold tracking-wider text-zinc-800 uppercase mr-3">Xưởng In Trực Tiếp</span>
-            <span className="text-[10px] tracking-widest text-zinc-400 uppercase border-l border-zinc-300 pl-3">Factory Direct</span>
+            <span className="text-xs font-semibold tracking-wider text-zinc-800 uppercase mr-3">Xưởng In PET TPHCM</span>
+            <span className="text-[10px] tracking-widest text-zinc-400 uppercase border-l border-zinc-300 pl-3">Trực Tiếp - Xưởng Bình Tân</span>
           </div>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold tracking-tight leading-[1.05] text-zinc-900 mb-4">
-            XƯỞNG IN PET <br/>
+            IN PET CHUYỂN NHIỆT <br/>
             <span className="text-transparent bg-clip-text bg-gradient-cmyk drop-shadow-sm">HOÀNG PHÚC</span>
           </h1>
-          <div className="text-2xl sm:text-3xl font-display font-medium text-zinc-400 mb-8 tracking-tight">
-            PET DTF PRINTING FACTORY
+          <div className="text-xl sm:text-2xl font-display font-medium text-zinc-400 mb-8 tracking-tight max-w-lg leading-snug">
+            Chuyên in PET chất lượng cao trên máy ORIC I3200
           </div>
           
           <div className="space-y-2 mb-10 border-l-2 border-zinc-200 pl-6 py-1">
-            <p className="text-lg text-zinc-700 max-w-xl leading-relaxed font-light">
-              In PET DTF chuyên nghiệp — màu sắc CMYK sắc nét — giá xưởng tận gốc.
-            </p>
+            <h2 className="text-lg text-zinc-700 max-w-xl leading-relaxed font-light">
+              Xưởng in PET Bình Tân, Tân Phú chuyên nghiệp — màu CMYK sắc nét — giao nhanh toàn quốc. Báo giá tận xưởng!
+            </h2>
             <p className="text-sm text-zinc-400 max-w-xl leading-relaxed font-light">
-              Professional PET printing — vivid CMYK colors — factory-direct pricing.
+              In áo thun thành phẩm, in đồng phục, nhận mọi đơn hàng từ 1 mét.
             </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
             <button onClick={onOpenQuote} className="bg-zinc-900 text-white px-8 py-4 rounded-full font-medium hover:bg-zinc-800 transition-all inline-flex flex-col items-center shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] group cursor-pointer border-none outline-none">
-              <span className="text-base">Báo giá nhanh</span>
+              <span className="text-base">Báo giá in PET</span>
               <span className="text-[10px] text-zinc-400 font-light group-hover:text-zinc-300 transition-colors">Quick Quote</span>
             </button>
             <a href="#gallery" className="bg-white border border-zinc-200 text-zinc-800 px-8 py-4 rounded-full font-medium hover:bg-zinc-50 transition-all inline-flex flex-col items-center hover:border-zinc-300 group shadow-sm cursor-pointer">
-              <span className="text-base">Xem mẫu in</span>
+              <span className="text-base">Mẫu in thực tế</span>
               <span className="text-[10px] text-zinc-500 font-light group-hover:text-zinc-400 transition-colors">View Gallery</span>
             </a>
           </div>
@@ -191,12 +192,12 @@ function Hero({ scrollYProgress, onOpenQuote }: { scrollYProgress: any, onOpenQu
 
 function Services() {
   const services = [
-    { title: 'In PET DTF', en: 'PET DTF Printing', desc: 'Công nghệ in sắc nét, bền màu trên film PET trong suốt.', icon: Printer, colSpan: 'md:col-span-2 lg:col-span-2' },
-    { title: 'Ép chuyển nhiệt', en: 'Heat Transfer', desc: 'Áp dụng công nghệ ép nhiệt công nghiệp cao cấp.', icon: Layers, colSpan: 'md:col-span-1 lg:col-span-1' },
-    { title: 'Thiết kế file', en: 'File Design', desc: 'Xử lý vector chuẩn in.', icon: PenTool, colSpan: 'md:col-span-1 lg:col-span-1' },
-    { title: 'Hỗ trợ local brand', en: 'Local Brand Support', desc: 'Đồng hành sản xuất.', icon: CheckCircle, colSpan: 'md:col-span-2 lg:col-span-1' },
-    { title: 'In đồng phục', en: 'Uniform Printing', desc: 'Giải pháp in ấn hàng loạt.', icon: Package, colSpan: 'md:col-span-1 lg:col-span-1' },
-    { title: 'Giao hàng toàn quốc', en: 'Nationwide Delivery', desc: 'Đóng gói kỹ, vận chuyển nhanh.', icon: MapPin, colSpan: 'md:col-span-2 lg:col-span-2' },
+    { title: 'In PET Chuyển Nhiệt', en: 'Heat Transfer PET', desc: 'In sắc nét trên film PET trong suốt, màu sắc ổn định, độ phân giải cao.', icon: Printer, colSpan: 'md:col-span-2 lg:col-span-2' },
+    { title: 'In Áo Thun', en: 'T-Shirt Printing', desc: 'Nhận in áo thun thành phẩm, áo thun theo yêu cầu mọi số lượng.', icon: Layers, colSpan: 'md:col-span-1 lg:col-span-1' },
+    { title: 'Thiết Kế File In', en: 'Design Support', desc: 'Đội ngũ chuyên nghiệp hỗ trợ xử lý vector chuẩn in cho khách hàng mới.', icon: PenTool, colSpan: 'md:col-span-1 lg:col-span-1' },
+    { title: 'In Đồng Phục', en: 'Uniform Printing', desc: 'Giải pháp in ấn hàng loạt số lượng lớn, đảm bảo chất lượng đồng đều.', icon: CheckCircle, colSpan: 'md:col-span-2 lg:col-span-1' },
+    { title: 'In Cao Thành', en: 'High Density Print', desc: 'In nổi hiệu ứng cao thành độc đáo tạo điểm nhấn nhận diện thương hiệu.', icon: Package, colSpan: 'md:col-span-1 lg:col-span-1' },
+    { title: 'Phục Vụ Hỏa Tốc', en: 'Fast & Nationwide', desc: 'Lấy hàng trong ngày tại TPHCM. Giao toàn quốc qua GHTK, Viettel Post, chành xe...', icon: MapPin, colSpan: 'md:col-span-2 lg:col-span-2' },
   ];
 
   return (
@@ -204,13 +205,13 @@ function Services() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="mb-20 flex flex-col items-center text-center">
           <h2 className="text-4xl md:text-5xl font-display font-semibold tracking-tight text-zinc-900 mb-4">
-            Dịch vụ chuyên nghiệp
+            Dịch vụ In PET TP.HCM
           </h2>
           <div className="text-zinc-400 font-display tracking-widest uppercase text-sm border-b border-zinc-200 pb-4 max-w-sm w-full mx-auto mb-6">
-            Professional Services
+            Our Services
           </div>
           <p className="text-zinc-500 font-light text-lg max-w-2xl">
-            Giải pháp in ấn công nghiệp toàn diện, đáp ứng tiêu chuẩn khắt khe nhất của các thương hiệu thời trang.
+            Chuyên in PET chuyển nhiệt, in áo thun, in đồng phục, phục vụ xưởng may, shop thời trang toàn quốc. Nhận đơn lẻ từ 1 mét.
           </p>
         </div>
 
@@ -253,11 +254,11 @@ function Services() {
 
 function Features() {
   const features = [
-    { title: 'Màu CMYK chuẩn', en: 'Perfect CMYK Colors', desc: 'Mực in công nghiệp đảm bảo bản in đúng màu, tươi sáng và không phai.', icon: Droplet },
-    { title: 'Giá xưởng tận gốc', en: 'Factory Direct Pricing', desc: 'Tối ưu chi phí nhờ hệ thống máy móc khép kín, không qua trung gian.', icon: Package },
-    { title: 'Hỗ trợ file chuyên nghiệp', en: 'Pro File Support', desc: 'Đội ngũ designer rà soát và căn chỉnh file trước khi đưa vào sản xuất.', icon: PenTool },
-    { title: 'Giao nhanh toàn quốc', en: 'Fast Nationwide', desc: 'Quy trình đóng gói cẩn thận, đáp ứng các đơn hàng cần tiến độ gấp.', icon: Clock },
-    { title: 'Hỗ trợ Local Brand', en: 'Local Brand Run', desc: 'Phù hợp làm tag, nhãn, logo và các chi tiết định vị thương hiệu.', icon: ShieldCheck },
+    { title: 'Chất Lượng In Đẹp', en: 'High Quality', desc: 'Sử dụng mực in chuẩn, cho ra màng PET chuyển nhiệt sắc nét, bền màu (màu sắc ổn định).', icon: Droplet },
+    { title: 'Giá In Cạnh Tranh', en: 'Affordable Price', desc: 'Giá xưởng tận gốc Bình Tân vì không qua trung gian, phù hợp cho xưởng may, shop thời trang.', icon: Package },
+    { title: 'Tốc Độ Sản Xuất', en: 'Capacity >25m/h', desc: 'Máy in PET ORIC công nghiệp 4-6 đầu phun Epson I3200 (main Hoson). Đảm bảo đúng tiến độ, lấy hàng trong ngày.', icon: Droplet },
+    { title: 'Giao Hàng Nhanh', en: 'Fast Delivery', desc: 'Giao toàn quốc siêu tốc qua GHTK, Viettel Post, J&T, Chành xe.', icon: Clock },
+    { title: 'Hỗ Trợ Khách Mới', en: 'Customer Care', desc: 'Đội ngũ kỹ thuật hỗ trợ thiết kế file in PET cực chuẩn. Nhận thiết kế từ số lượng ít 1 mét.', icon: ShieldCheck },
   ];
 
   return (
@@ -269,13 +270,13 @@ function Features() {
         <div className="grid lg:grid-cols-3 gap-16">
           <div className="col-span-1 lg:sticky lg:top-32 h-fit">
             <h2 className="text-3xl lg:text-4xl font-display font-semibold tracking-tight text-zinc-900 mb-3">
-              Vì sao chọn <br/>Hoàng Phúc
+              Xưởng In PET <br/>Uy Tín Bình Tân
             </h2>
             <div className="text-zinc-400 font-display tracking-widest uppercase text-xs mb-6">
               Why Choose Us
             </div>
             <p className="text-zinc-500 font-light leading-relaxed mb-8 max-w-sm">
-              Chúng tôi kết hợp công nghệ máy in tối tân cùng sự thấu hiểu sâu sắc về nhu cầu sản xuất của các thương hiệu nội địa.
+              Với máy in PET ORIC sử dụng 4-6 đầu phun Epson I3200, tốc độ in vượt trội, chúng tôi tự tin mang đến dịch vụ in PET giá rẻ, tốc độ trên 25m/h. Phục vụ TP.HCM và toàn quốc.
             </p>
             <div className="hidden lg:flex items-center gap-3 text-sm font-medium text-zinc-900 hover:text-zinc-600 transition-colors cursor-pointer w-fit group">
                Tìm hiểu thêm về nhà máy
@@ -448,7 +449,7 @@ function Process() {
   );
 }
 
-function CTA({ onOpenQuote }: { onOpenQuote?: () => void }) {
+export function CTA({ onOpenQuote }: { onOpenQuote?: () => void }) {
   return (
     <section className="py-32 md:py-40 relative flex items-center justify-center overflow-hidden bg-white">
       {/* CMYK Center Glow */}
@@ -487,7 +488,7 @@ function CTA({ onOpenQuote }: { onOpenQuote?: () => void }) {
   );
 }
 
-function Footer() {
+export function Footer() {
   return (
     <footer id="contact" className="bg-[#0a0b0d] text-zinc-400 py-20 border-t border-zinc-800/50 relative overflow-hidden">
       <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-cmyk opacity-30"></div>
@@ -575,7 +576,7 @@ function Footer() {
   );
 }
 
-function FloatingZalo() {
+export function FloatingZalo() {
   return (
     <motion.a
       href="https://zalo.me/0905305693"
@@ -603,7 +604,7 @@ function FloatingZalo() {
   );
 }
 
-function QuoteModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+export function QuoteModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -665,5 +666,34 @@ function QuoteModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
         </div>
       )}
     </AnimatePresence>
+  );
+}
+
+function FAQ() {
+  const faqs = [
+    { q: 'In PET là gì? Tại sao nên chọn in PET?', a: 'In PET (DTF - Direct to Film) là công nghệ in lên màng PET, sau đó dùng máy ép nhiệt để chuyển hình ảnh lên vải. In PET cho màu sắc rực rỡ, độ bền cao, in được trên mọi chất liệu vải mà không bị giới hạn màu sắc thiết kế.' },
+    { q: 'Xưởng in PET Bình Tân của Hoàng Phúc dùng máy gì?', a: 'Chúng tôi đầu tư dàn máy in PET ORIC công nghiệp, trang bị 4-6 đầu phun Epson I3200 thế hệ mới, chạy main Hoson ổn định. Tốc độ thực tế đạt >25m/h, đảm bảo chất lượng sắc nét và đáp ứng tiến độ gấp.' },
+    { q: 'In PET chuyển nhiệt có bền không? Giặt có bong tróc không?', a: 'Độ bền của hình in PET cực kỳ cao. Mực in bám chắc, co giãn theo vải, chống nứt nẻ và chịu được giặt máy (lưu ý nên lộn trái áo khi giặt để bảo quản độ bóng của hình in lâu hơn).' },
+    { q: 'Số lượng đặt in tối thiểu là bao nhiêu?', a: 'Hoàng Phúc nhận đơn hàng in PET Bình Tân, in áo thun theo yêu cầu mọi số lượng. Dù bạn chỉ in 1 mét màng PET hay làm 1 mẫu áo, chúng tôi vẫn sẵn sàng hỗ trợ.' },
+    { q: 'Thời gian giao hàng mất bao lâu?', a: 'Đối với các đơn hàng dưới 100m, chúng tôi có thể giao hỏa tốc hoặc cho khách lấy trong ngày tại TPHCM. Với đơn số lượng lớn, sẽ từ 1-3 ngày làm việc. Quý khách ở tỉnh, chúng tôi hỗ trợ gửi GHTK, Viettel Post hoặc chành xe.' },
+    { q: 'Có hỗ trợ thiết kế file in PET không?', a: 'Có. Đội ngũ kỹ thuật của Hoàng Phúc sẽ rà soát, canh chỉnh màu hệ CMYK và hỗ trợ thiết kế file in (hỗ trợ tạo viền trắng, chỉnh sửa vector) cho các shop thời trang, khách hàng mới chưa rành kỹ thuật.' }
+  ];
+  return (
+    <section className="py-24 bg-white border-t border-zinc-100">
+      <div className="max-w-4xl mx-auto px-6 md:px-12">
+        <h2 className="text-3xl md:text-4xl font-display font-semibold tracking-tight text-zinc-900 mb-2 text-center">
+          Câu Hỏi Thường Gặp
+        </h2>
+        <p className="text-center text-zinc-500 font-light mb-12">Giải đáp thắc mắc về in PET, in áo thun, giá và quá trình nhận đơn.</p>
+        <div className="space-y-6">
+          {faqs.map((faq, i) => (
+            <div key={i} className="border border-zinc-200 rounded-2xl p-6 bg-zinc-50 hover:bg-white transition-colors hover:shadow-sm">
+              <h3 className="font-display font-medium text-lg text-zinc-900 mb-2">{faq.q}</h3>
+              <p className="text-zinc-600 font-light text-sm leading-relaxed">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
