@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
 import { ChevronRight, ChevronLeft, X, ArrowRight, Printer, PenTool, CheckCircle, Package, Layers, Droplet, Clock, ShieldCheck, Mail, Phone, MapPin, Instagram, Facebook } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function App() {
   const { scrollYProgress } = useScroll();
@@ -37,35 +38,46 @@ export function Navbar({ onOpenQuote }: { onOpenQuote?: () => void }) {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-xl border-b border-zinc-200/50 py-4 shadow-[0_4px_30px_rgba(0,0,0,0.03)]' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-        <div className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 flex items-center justify-center relative overflow-hidden group">
              <div className="absolute inset-0 bg-gradient-cmyk opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg"></div>
              <img src="/454.png" alt="Hoàng Phúc Logo" className="w-10 h-10 object-contain relative z-10" />
           </div>
           <div className="hidden sm:flex flex-col">
-            <span className="font-display font-bold text-base tracking-tight leading-none mb-0.5">HOÀNG PHÚC</span>
+            <span className="font-display font-bold text-base tracking-tight leading-none mb-0.5 text-zinc-900 group-hover:text-cyan-600 transition-colors">HOÀNG PHÚC</span>
             <span className="font-sans text-[9px] tracking-[0.2em] text-zinc-500 uppercase">Print Studio</span>
           </div>
+        </Link>
+        <div className="hidden lg:flex items-center gap-8 text-sm font-medium text-zinc-600">
+          
+          <div className="relative group cursor-pointer py-4 -my-4 flex items-center">
+            <span className="hover:text-zinc-900 transition-colors">Dịch vụ</span>
+            <div className="absolute top-full left-0 mt-2 w-48 bg-white border border-zinc-100 shadow-xl rounded-2xl p-2 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 before:absolute before:-top-4 before:left-0 before:w-full before:h-4">
+              <Link to="/dich-vu/in-pet-dtf" className="block px-4 py-2 hover:bg-zinc-50 rounded-xl hover:text-zinc-900">In PET DTF</Link>
+              <Link to="/dich-vu/in-pet-ao-thun" className="block px-4 py-2 hover:bg-zinc-50 rounded-xl hover:text-zinc-900">In PET Áo Thun</Link>
+              <Link to="/dich-vu/in-pet-local-brand" className="block px-4 py-2 hover:bg-zinc-50 rounded-xl hover:text-zinc-900">In PET Local Brand</Link>
+              <Link to="/dich-vu/in-pet-so-luong-it" className="block px-4 py-2 hover:bg-zinc-50 rounded-xl hover:text-zinc-900">In PET Số Lượng Ít</Link>
+              <Link to="/dich-vu/in-pet-so-luong-lon" className="block px-4 py-2 hover:bg-zinc-50 rounded-xl hover:text-zinc-900">In PET Số Lượng Lớn</Link>
+            </div>
+          </div>
+
+          <div className="relative group cursor-pointer py-4 -my-4 flex items-center">
+            <span className="hover:text-zinc-900 transition-colors">Khu vực phục vụ</span>
+            <div className="absolute top-full left-0 mt-2 w-48 bg-white border border-zinc-100 shadow-xl rounded-2xl p-2 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 before:absolute before:-top-4 before:left-0 before:w-full before:h-4">
+              <Link to="/in-pet-quan-binh-tan" className="block px-4 py-2 hover:bg-zinc-50 rounded-xl hover:text-zinc-900">Bình Tân</Link>
+              <Link to="/in-pet-quan-tan-phu" className="block px-4 py-2 hover:bg-zinc-50 rounded-xl hover:text-zinc-900">Tân Phú</Link>
+              <Link to="/in-pet-quan-tan-binh" className="block px-4 py-2 hover:bg-zinc-50 rounded-xl hover:text-zinc-900">Tân Bình</Link>
+              <Link to="/in-pet-quan-6" className="block px-4 py-2 hover:bg-zinc-50 rounded-xl hover:text-zinc-900">Quận 6</Link>
+              <Link to="/in-pet-binh-chanh" className="block px-4 py-2 hover:bg-zinc-50 rounded-xl hover:text-zinc-900">Bình Chánh</Link>
+              <Link to="/in-pet-tphcm" className="block px-4 py-2 hover:bg-zinc-50 rounded-xl hover:text-zinc-900">TP.HCM</Link>
+            </div>
+          </div>
+
+          <Link to="/kien-thuc" className="hover:text-zinc-900 py-2 transition-colors">Kiến thức in PET</Link>
+          <Link to="/bang-gia" className="hover:text-zinc-900 py-2 transition-colors">Bảng giá</Link>
+          <Link to="/lien-he" className="hover:text-zinc-900 py-2 transition-colors">Liên hệ</Link>
         </div>
-        <div className="hidden lg:flex items-center gap-10 text-sm font-medium text-zinc-500">
-          <a href="#services" className="hover:text-zinc-900 transition-colors flex flex-col items-center group">
-            <span>Dịch vụ</span>
-            <span className="text-[10px] text-zinc-400 font-light group-hover:text-zinc-600 transition-colors">Services</span>
-          </a>
-          <a href="#features" className="hover:text-zinc-900 transition-colors flex flex-col items-center group">
-            <span>Vì sao chọn</span>
-            <span className="text-[10px] text-zinc-400 font-light group-hover:text-zinc-600 transition-colors">Why Us</span>
-          </a>
-          <a href="#gallery" className="hover:text-zinc-900 transition-colors flex flex-col items-center group">
-            <span>Thư viện ảnh</span>
-            <span className="text-[10px] text-zinc-400 font-light group-hover:text-zinc-600 transition-colors">Gallery</span>
-          </a>
-          <a href="#process" className="hover:text-zinc-900 transition-colors flex flex-col items-center group">
-            <span>Quy trình</span>
-            <span className="text-[10px] text-zinc-400 font-light group-hover:text-zinc-600 transition-colors">Process</span>
-          </a>
-        </div>
-        <button onClick={onOpenQuote} className="bg-zinc-900 text-white pl-6 pr-2 py-2 rounded-full text-sm font-medium hover:bg-zinc-800 transition-all shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] inline-flex items-center gap-4 group cursor-pointer border-none outline-none">
+        <button onClick={onOpenQuote} className="bg-zinc-900 text-white pl-6 pr-2 py-2 rounded-full text-sm font-medium hover:bg-zinc-800 transition-all shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] inline-flex items-center gap-4 group cursor-pointer border-none outline-none z-10">
           <div className="flex flex-col items-start leading-none gap-0.5 py-0.5">
             <span>Nhận báo giá</span>
             <span className="text-[10px] text-zinc-400 font-light group-hover:text-zinc-300 transition-colors">Get Quote</span>
@@ -522,12 +534,23 @@ export function Footer() {
             <h5 className="text-white font-medium mb-2 font-display">Chuyên mục</h5>
             <div className="text-[10px] text-zinc-600 uppercase tracking-widest mb-6 border-b border-zinc-800/50 pb-2 inline-block">Navigation</div>
             <ul className="space-y-4 text-sm font-light">
-              <li><a href="#" className="hover:text-white transition-colors">In PET DTF chất lượng cao</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Sản xuất áo thun Local Brand</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Thiết kế & Canh màu chuẩn</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Gia công ép chuyển nhiệt</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Vật tư ngành in PET</a></li>
+              <li><Link to="/dich-vu/in-pet-dtf" className="hover:text-white transition-colors">In PET DTF chất lượng cao</Link></li>
+              <li><Link to="/dich-vu/in-pet-local-brand" className="hover:text-white transition-colors">Sản xuất áo thun Local Brand</Link></li>
+              <li><Link to="/kien-thuc/cach-chuan-bi-file-in-pet" className="hover:text-white transition-colors">Thiết kế & Canh màu chuẩn</Link></li>
+              <li><Link to="/dich-vu/in-pet-so-luong-lon" className="hover:text-white transition-colors">Gia công in số lượng lớn</Link></li>
+              <li><Link to="/bang-gia" className="hover:text-white transition-colors">Bảng giá in PET</Link></li>
             </ul>
+            
+            <h5 className="text-white font-medium mt-10 mb-2 font-display">Khu vực phục vụ</h5>
+            <div className="text-[10px] text-zinc-600 uppercase tracking-widest mb-4 border-b border-zinc-800/50 pb-2 inline-block">Areas Served</div>
+            <div className="flex flex-wrap gap-2 text-xs font-light text-zinc-500">
+              <Link to="/in-pet-quan-binh-tan" className="hover:text-zinc-300">Bình Tân</Link>,
+              <Link to="/in-pet-quan-tan-phu" className="hover:text-zinc-300">Tân Phú</Link>,
+              <Link to="/in-pet-quan-tan-binh" className="hover:text-zinc-300">Tân Bình</Link>,
+              <Link to="/in-pet-quan-6" className="hover:text-zinc-300">Quận 6</Link>,
+              <Link to="/in-pet-binh-chanh" className="hover:text-zinc-300">Bình Chánh</Link>,
+              <Link to="/in-pet-tphcm" className="hover:text-zinc-300">TP.HCM</Link>
+            </div>
           </div>
 
           <div className="md:col-span-5 lg:col-span-4">

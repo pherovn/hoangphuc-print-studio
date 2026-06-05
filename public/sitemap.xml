@@ -2,104 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://inpet.hoangphuc.vn/</loc>
-    <lastmod>2026-05-30</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://inpet.hoangphuc.vn/in-pet-tphcm</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://inpet.hoangphuc.vn/in-pet-chuyen-nhiet</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://inpet.hoangphuc.vn/xuong-in-pet</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://inpet.hoangphuc.vn/in-pet-binh-tan</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://inpet.hoangphuc.vn/in-pet-tan-phu</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://inpet.hoangphuc.vn/in-pet-tan-binh</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://inpet.hoangphuc.vn/thiet-ke-file-in</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://inpet.hoangphuc.vn/in-ao-thun-theo-yeu-cau</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://inpet.hoangphuc.vn/in-dong-phuc</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- Services -->
+  <url><loc>https://inpet.hoangphuc.vn/dich-vu/in-pet-dtf</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/dich-vu/in-pet-ao-thun</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/dich-vu/in-pet-local-brand</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/dich-vu/in-pet-so-luong-it</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/dich-vu/in-pet-so-luong-lon</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Locations -->
+  <url><loc>https://inpet.hoangphuc.vn/in-pet-quan-binh-tan</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/in-pet-binh-tan</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/in-pet-quan-tan-phu</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/in-pet-tan-phu</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/in-pet-quan-6</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/in-pet-quan-tan-binh</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/in-pet-binh-chanh</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/in-pet-tphcm</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
   <!-- Blog Posts -->
-  <url>
-    <loc>https://inpet.hoangphuc.vn/blog/in-pet-la-gi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://inpet.hoangphuc.vn/blog/in-pet-chuyen-nhiet-hoat-dong-nhu-the-nao</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://inpet.hoangphuc.vn/blog/in-pet-va-dtf-khac-nhau-gi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://inpet.hoangphuc.vn/blog/cach-chuan-bi-file-in-pet</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://inpet.hoangphuc.vn/blog/nhiet-do-ep-pet-tieu-chuan</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://inpet.hoangphuc.vn/blog/cac-loi-thuong-gap-khi-ep-pet</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://inpet.hoangphuc.vn/blog/in-pet-co-ben-khong</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://inpet.hoangphuc.vn/blog/pet-phu-hop-voi-loai-vai-nao</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://inpet.hoangphuc.vn/blog/cach-chon-xuong-in-pet-uy-tin</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://inpet.hoangphuc.vn/blog/bao-gia-in-pet-theo-so-luong</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <url><loc>https://inpet.hoangphuc.vn/kien-thuc</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/kien-thuc/in-pet-la-gi</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/kien-thuc/in-pet-chi-tiet</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/kien-thuc/in-pet-va-in-lua-khac-nhau-the-nao</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/kien-thuc/in-pet-co-ben-khong</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/kien-thuc/pet-dtf-cho-local-brand</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/kien-thuc/cach-chuan-bi-file-in-pet</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/kien-thuc/bang-gia-in-pet-moi-nhat</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/kien-thuc/cac-loi-thuong-gap-khi-ep-pet</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/kien-thuc/nen-chon-pet-hay-decal</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/kien-thuc/in-pet-so-luong-it</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/kien-thuc/in-pet-so-luong-lon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Static Pages -->
+  <url><loc>https://inpet.hoangphuc.vn/bang-gia</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://inpet.hoangphuc.vn/lien-he</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
