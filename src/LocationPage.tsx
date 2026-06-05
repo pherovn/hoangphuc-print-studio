@@ -11,48 +11,42 @@ const locationData = {
     keyword: 'in pet quận bình tân',
     title: 'Xưởng In PET Quận Bình Tân | In Chuyển Nhiệt DTF Giá Rẻ, Giao Nhanh',
     desc: 'Xưởng in PET quận Bình Tân uy tín. Nhận in PET DTF, in áo thun số lượng ít đến lớn. Máy in 4-6 đầu phun I3200, cam kết không bong tróc, giá tận xưởng.',
-  },
-  'in-pet-binh-tan': {
-    name: 'Bình Tân',
-    keyword: 'in pet bình tân',
-    title: 'In PET Bình Tân | Xưởng In PET DTF Trực Tiếp Không Qua Trung Gian',
-    desc: 'Dịch vụ in PET Bình Tân chuyên nghiệp. Tốc độ in >25m/h, lấy hàng trong ngày. Hỗ trợ thiết kế file in PET miễn phí cho khách Bình Tân.',
+    geoAdvantage: 'Tọa lạc tại khu vực năng động với các cụm công nghiệp phát triển như KCN Tân Tạo và gần Aeon Mall Bình Tân, xưởng in PET của chúng tôi rất thuận tiện cho quá trình vận chuyển và giao thương hàng hóa.',
   },
   'in-pet-quan-tan-phu': {
     name: 'Quận Tân Phú',
     keyword: 'in pet quận tân phú',
     title: 'In PET Quận Tân Phú | In Áo Thun Chuyển Nhiệt Nhanh Chóng, Sắc Nét',
     desc: 'Chuyên nhận in PET quận Tân Phú, xưởng in DTF chất lượng cao bám dính siêu tốt. Phục vụ shop thời trang, local brand tại Tân Phú.',
-  },
-  'in-pet-tan-phu': {
-    name: 'Tân Phú',
-    keyword: 'in pet tân phú',
-    title: 'In PET Tân Phú - Xưởng Gia Công In Áo Thun Bằng Công Nghệ PET',
-    desc: 'Tìm xưởng in PET Tân Phú uy tín? Hoàng Phúc cung cấp giải pháp in PET chuyển nhiệt bền màu, giặt máy thoải mái, giá tốt nhất Tân Phú.',
+    geoAdvantage: 'Nằm ở vị trí kết nối thuận lợi gần trục đường Lũy Bán Bích sầm uất và khu vực Công viên văn hóa Đầm Sen, việc giao nhận hàng in PET DTF đến các xưởng may tại Tân Phú luôn được diễn ra nhanh chóng nhất.',
   },
   'in-pet-quan-6': {
     name: 'Quận 6',
     keyword: 'in pet quận 6',
     title: 'In PET Quận 6 | In Màng PET Chuyển Nhiệt Rẻ Đẹp HCM',
     desc: 'Xưởng gia công in PET trực tiếp phục vụ khu vực Quận 6. Màng in dễ ép, màu CMYK tươi sáng, không giới hạn màu sắc.',
+    geoAdvantage: 'Quận 6 nổi tiếng với các khu chợ đầu mối giao thương nhộn nhịp. Chúng tôi tự hào cung cấp dịch vụ in màng PET lấy liền, phục vụ nhu cầu lớn của các shop quần áo và tiểu thương trên địa bàn.',
   },
   'in-pet-quan-tan-binh': {
     name: 'Quận Tân Bình',
-    keyword: 'in pet tân bình',
+    keyword: 'in pet quận tân bình',
     title: 'In PET Quận Tân Bình | Xưởng In Đồng Phục, Áo Thun Local Brand',
     desc: 'Dịch vụ in PET Tân Bình chuyên nghiệp cho xưởng may mặc. Giao hàng hỏa tốc khu vực Tân Bình, file in sắc nét 4-6 đầu phun.',
+    geoAdvantage: 'Là trung tâm sản xuất với nhiều kho bãi, xưởng may và gần ngay Sân bay Quốc tế Tân Sơn Nhất, việc thiết kế file và in ấn tại khu vực Tân Bình giúp tiết kiệm tối đa thời gian vận hành cho doanh nghiệp may mặc.',
   },
   'in-pet-binh-chanh': {
     name: 'Huyện Bình Chánh',
     keyword: 'in pet bình chánh',
     title: 'In PET Bình Chánh | Xưởng In DTF Công Suất Lớn, Nhận Mọi Đơn Hàng',
     desc: 'Nhận in PET DTF giao tận nơi Bình Chánh. Giải pháp ép chuyển nhiệt lên mọi loại vải bền bỉ, nhận đơn từ 1 mét đến hàng ngàn mét.',
+    geoAdvantage: 'Nằm tiếp giáp ngay trục đường huyết mạch Quốc lộ 1A, các chuyến xe vận chuyển màng PET cuộn lớn của chúng tôi có thể dễ dàng đi đến mọi nhà xưởng quy mô lớn tại khu vực Bình Chánh.',
   },
   'in-pet-tphcm': {
     name: 'TP.HCM',
     keyword: 'in pet tphcm',
     title: 'In PET TPHCM | Xưởng In PET Chuyển Nhiệt DTF Lớn Nhất Sài Gòn',
     desc: 'In PET TPHCM chuyên nghiệp với hệ thống máy ORIC I3200 cao cấp. Giao hàng toàn quốc, hỗ trợ thiết kế file, báo giá in PET TPHCM tận gốc.',
+    geoAdvantage: 'Phục vụ thị trường TP.HCM năng động, In PET Hoàng Phúc đáp ứng mọi quy mô đơn hàng của thị trường thành phố lớn nhất nước, hỗ trợ thiết kế và giao hàng hỏa tốc cho các Local Brand và nhà xưởng.',
   }
 };
 
@@ -78,6 +72,7 @@ export default function LocationPage() {
         <meta name="keywords" content={`${loc.keyword}, in pet dtf ${loc.name.toLowerCase()}, xưởng in pet ${loc.name.toLowerCase()}`} />
         <meta property="og:title" content={loc.title} />
         <meta property="og:description" content={loc.desc} />
+        <link rel="canonical" href={`https://inpet.hoangphuc.vn/${slug}`} />
         
         <script type="application/ld+json">
           {JSON.stringify({
@@ -225,6 +220,13 @@ export default function LocationPage() {
             <p>
               Nếu bạn đang kinh doanh thời trang, làm áo thun thương hiệu (local brand), hoặc vận hành một xưởng gia công may mặc tại <strong>{loc.name}</strong>, công nghệ In PET chuyển nhiệt (DTF - Direct to Film) là lựa chọn không thể bỏ qua. Khác với in lụa truyền thống cần số lượng lớn và hạn chế số lượng màu sắc, công nghệ <strong>{loc.keyword}</strong> tại Hoàng Phúc cho phép bạn in những thiết kế đa sắc phức tạp nhất, gradient mượt mà với chỉ từ một mét trở lên.
             </p>
+
+            {loc.geoAdvantage && (
+              <>
+                <h3>Lợi thế địa lý tại {loc.name}</h3>
+                <p>{loc.geoAdvantage}</p>
+              </>
+            )}
             
             <h3>Chất lượng màng PET và mực in là cốt lõi</h3>
             <p>

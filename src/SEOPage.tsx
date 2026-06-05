@@ -96,6 +96,24 @@ export default function SEOPage({ isBlog = false, isPricing = false, isContact =
             })}
           </script>
         )}
+
+        {type === 'Service' && slug && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "serviceType": "Printing Services",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "Hoàng Phúc Print Studio",
+                "telephone": "0905305693"
+              },
+              "url": currentUrl,
+              "name": currentTitle,
+              "description": desc
+            })}
+          </script>
+        )}
       </Helmet>
 
       <Navbar onOpenQuote={() => setIsQuoteModalOpen(true)} />
@@ -188,6 +206,18 @@ export default function SEOPage({ isBlog = false, isPricing = false, isContact =
                     </div>
                  ))}
                  
+                 {/* Internal Links for SEO */}
+                 <div className="mt-16 pt-10 border-t border-zinc-100">
+                    <h3 className="text-xl font-display font-semibold mb-6">Tham khảo thêm các dịch vụ & khu vực của chúng tôi:</h3>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-base not-prose list-none p-0 m-0">
+                      <li>👉 <Link to="/dich-vu/in-pet-dtf" className="text-sky-600 hover:underline font-medium">In PET DTF chất lượng cao</Link></li>
+                      <li>👉 <Link to="/dich-vu/in-pet-local-brand" className="text-sky-600 hover:underline font-medium">In PET cho Local Brand</Link></li>
+                      <li>👉 <Link to="/in-pet-quan-binh-tan" className="text-sky-600 hover:underline font-medium">Xưởng in PET Quận Bình Tân</Link></li>
+                      <li>👉 <Link to="/in-pet-quan-tan-phu" className="text-sky-600 hover:underline font-medium">Nhận in PET tại Tân Phú</Link></li>
+                      <li>👉 <Link to="/in-pet-quan-tan-binh" className="text-sky-600 hover:underline font-medium">In PET giao siêu tốc Tân Bình</Link></li>
+                    </ul>
+                 </div>
+
                  <h3>Liên hệ với chúng tôi ngay</h3>
                  <p>Để nhận báo giá đặc biệt cho <strong>{currentTitle}</strong>, vui lòng kết nối với chúng tôi qua Zalo 0905.305.693 để được kỹ thuật hỗ trợ chuẩn màu hệ CMYK.</p>
               </div>

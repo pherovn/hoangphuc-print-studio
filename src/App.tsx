@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
 import { ChevronRight, ChevronLeft, X, ArrowRight, Printer, PenTool, CheckCircle, Package, Layers, Droplet, Clock, ShieldCheck, Mail, Phone, MapPin, Instagram, Facebook } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 export default function App() {
   const { scrollYProgress } = useScroll();
@@ -9,6 +10,23 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white text-zinc-900 font-sans selection:bg-cyan-200 selection:text-cyan-900">
+      <Helmet>
+        <link rel="canonical" href="https://inpet.hoangphuc.vn" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Hoàng Phúc Print Studio",
+            "url": "https://inpet.hoangphuc.vn",
+            "logo": "https://inpet.hoangphuc.vn/454.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+84-905-305-693",
+              "contactType": "customer service"
+            }
+          })}
+        </script>
+      </Helmet>
       <Navbar onOpenQuote={() => setIsQuoteModalOpen(true)} />
       <main>
         <Hero scrollYProgress={scrollYProgress} onOpenQuote={() => setIsQuoteModalOpen(true)} />
@@ -115,8 +133,8 @@ function Hero({ scrollYProgress, onOpenQuote }: { scrollYProgress: any, onOpenQu
             <span className="text-[10px] tracking-widest text-zinc-400 uppercase border-l border-zinc-300 pl-3">Trực Tiếp - Xưởng Bình Tân</span>
           </div>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold tracking-tight leading-[1.05] text-zinc-900 mb-4">
-            IN PET CHUYỂN NHIỆT <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-cmyk drop-shadow-sm">HOÀNG PHÚC</span>
+            Xưởng In PET DTF Chuyển Nhiệt <br/>
+            Tại <span className="text-transparent bg-clip-text bg-gradient-cmyk drop-shadow-sm">Bình Tân TP.HCM</span>
           </h1>
           <div className="text-xl sm:text-2xl font-display font-medium text-zinc-400 mb-8 tracking-tight max-w-lg leading-snug">
             Chuyên in PET chất lượng cao trên máy ORIC I3200
